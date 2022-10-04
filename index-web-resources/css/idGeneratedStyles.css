@@ -230,6 +230,9 @@ div._idGenObjectStyle-Disabled {
 a.elementToFadeInAndOut {
     opacity: 1;
     animation: fade 2s linear;
+	width:200px;
+    height: 200px;
+    background: white;
 }
 @keyframes fade {
   0%,100% { opacity: 0 }
