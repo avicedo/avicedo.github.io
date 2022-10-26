@@ -1568,7 +1568,7 @@ span.CharOverride-8 {
 	-webkit-transform-origin:0% 0%;
 	height:36.92px;
 	left:0px;
-	position:sticky;
+	position:absolute;
 	bottom: 40px;
 	top:0px;
 	transform:translate(50.000px,2226.227px) rotate(270.000deg) skew(0.000deg) scale(1.000,1.000);
