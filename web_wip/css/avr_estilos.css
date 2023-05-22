@@ -73,7 +73,8 @@
         font-family: GroteskBold;
         src: url(../fonts/Grotesk/Grotesk-04Gras.woff) format(woff), 
              url(../fonts/Grotesk/Grotesk-04Gras.woff2) format(woff2);
-    }            
+    }    
+
 /* ESTILOS GENERALES */
 .separator{
     background-color: rgb(0, 0, 0);
@@ -131,44 +132,6 @@ p{
     float: right;
     align-items: center;
     text-align: center;
-}
-
-@media screen and (min-width: 0px) and (max-width: 1070px){
-    #menu_pc{
-        display: none;
-    }
-    #menu_mobile{
-        display: block;
-    }
-    div.header-left{
-        width: 50%;
-    }
-    div.header-right{
-        width: 60px;
-        height: 60px;
-        margin-top: 20px;
-        background-color: aqua;
-    }
-}
-
-@media screen and (min-width: 1071px) and (max-width: 1400px){
-    #menu_pc{
-        display: block;
-    }
-    #menu_mobile{
-        display: none;
-    }
-}
-
-a.header_menu{
-    text-decoration: none;
-    padding-left: 15px;
-    color: #1b0d10;
-    transition: color 0.5s;
-}
-
-a.header_menu:hover, a.header_menu:focus{
-    color: #b0cec6;
 }
 
 div.dropdown{
@@ -233,12 +196,64 @@ ul.dropdown_menu a:hover{
     color: #b0cec6;
 }
 
-/* CONTENIDO */
+@media screen and (min-width: 0px) and (max-width: 1070px){
+    #menu_pc{
+        display: none;
+    }
+    #menu_mobile{
+        display: block;
+    }
+    div.dropdown{
+        width: 60px;
+        height: 60px;
+        background-color: aqua;
+        display: inline-block;
+        float: right;
+        margin-top: 20px;
+    }
+    div.dropdown_content{
+        margin-top: 60px;
+        margin-left: -106px;
+    }
+    div.header_left{
+        width: 50%;
+    }
+    div.header_right{
+        float: right;
+        width: 60px;
+        height: 60px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: 0px;
+        background-color: aqua;
+    }
+}
+
+@media screen and (min-width: 1071px) and (max-width: 4000px){
+    #menu_pc{
+        display: block;
+    }
+    #menu_mobile{
+        display: none;
+    }
+}
+
+a.header_menu{
+    text-decoration: none;
+    padding-left: 15px;
+    color: #1b0d10;
+    transition: color 0.5s;
+}
+
+a.header_menu:hover, a.header_menu:focus{
+    color: #b0cec6;
+}
+
+/* INDEX */
 div.outer_container{
     width: 84%;
     height: auto;
     margin: auto;
-    overflow: hidden;
 }
 
 div.porfolio_general_izquierda{
@@ -271,15 +286,17 @@ div.porfolio_general_derecha{
 @media screen and (max-width: 600px) {
     div.porfolio_general_izquierda{
         width: 84%;
-        margin-right: 8%;
+        margin-left: 7%;
         display: inline-block;
         float: none;
+        margin-bottom: 10px;
     }
     div.porfolio_general_derecha{
         width: 84%;
-        margin-left: 8%;
+        margin-left: 7%;
         display: inline-block;
         float: none;
+        margin-bottom:10px;
     }
 }
 
@@ -412,6 +429,16 @@ div.footer_container a:hover{
     color:#b0cec6;
 }
 
+@media screen and (max-width: 600px) {
+    div.footer_inside{
+        margin-left:3%;
+        height: auto;
+    }
+    div.footer_down{
+        padding-left: 2%;
+    }
+}
+
 /* ABOUT */
 div.about_container{
     width: 84%;
@@ -432,7 +459,7 @@ div.about_especificaciones{
     flex-grow: 1;
     flex-basis: 0;
     justify-content: space-evenly;
-    margin-left: 10pt;
+    margin-left: -2pt;
     margin-right: 10pt;
 }
 
@@ -470,9 +497,88 @@ div.about_foto img{
     height: auto;
 }
 
-/* PROYECTOS */
+@media screen and (min-width:0px) and (max-width: 1000px){
+    #about_pc{
+        display: none;
+    }
+    #about_mobile{
+        display: block;
+    }
+    div.proyecto_texto{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:1001px) and (max-width: 4000px){
+    #about_pc{
+        display: block;
+    }
+    #about_mobile{
+        display: none;
+    }
+}
+div.about_container_mobile{
+    width: 84%;
+    display: flex;
+}
+
+div.about_especificaciones_mobile_2_A{
+    width: 28%;
+    display: inline-block;
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: space-evenly;
+    margin-left: -130px;
+    margin-right: 10pt;
+    margin-top: 40px;
+}
+div.about_especificaciones_mobile_2_B{
+    width: 28%;
+    display: inline-block;
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: space-evenly;
+    margin-left: 0px;
+    margin-right: 10pt;
+    margin-top: 40px;
+}
+
+div.about_especificaciones_mobile_3_A{
+    width: 100%;
+    display: inline-block;
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: space-evenly;
+    margin-left: -162px;
+    margin-right: 20pt;
+    margin-top: 40px;
+}
+
+div.about_especificaciones_mobile_3_B{
+    width: 100%;
+    display: inline-block;
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: space-evenly;
+    margin-left: 0px;
+    margin-right: 0pt;
+    margin-top: 40px;
+}
+
+div.about_especificaciones_mobile_3_C{
+    width: 100%;
+    display: block;
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: space-evenly;
+    margin-left: 0px;
+    margin-right: 0pt;
+    margin-top: 40px;
+}
+
+/* FUENTES */
 div.font_container{
-    width: 99%;
+    width: 100%;
     height: 200px;
     overflow: hidden;
     border-style: solid;
@@ -481,23 +587,34 @@ div.font_container{
     margin-bottom: 40px;   
 }
 
+div.font_image{
+    width:70%;
+    display: inline-block;
+}
+
+div.font_image img{
+    width: 101%;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: auto;
+}
+
 div.font_inside_upper{
+    display: inline-block;
     width: 30%;
-    height: 200px;
+    height: inherit;
     overflow: hidden;
     border-left: solid;
     border-width: 1.5pt;
     border-color: rgb(33, 33, 33);
-    margin-left: auto;
-    margin-right: 0px;
-    margin-top: -16px;
-    padding-top: 15px;
+    margin-right: -10px;
 }
 
 div.font_inside_upper h1{
     font-family: IgnazioDisplay;
     font-size: 16pt;
     text-align: center;
+    margin-top: 15px;
 }
 
 div.font_inside_upper p{
@@ -506,10 +623,21 @@ div.font_inside_upper p{
     margin-top: 10pt;
 }
 
-div.proyecto_imagen_izquierda{
-
-}
-
-div.proyecto_imagen_derecha{
-
+@media screen and (max-width: 1160px) {
+    div.font_container{
+        height: auto;
+    }
+    div.font_image{
+        height: auto;
+        width: 100%;
+    }
+    div.font_inside_upper{
+        border-left: none;
+        border-top: solid;
+        border-width: 1.5pt;
+        width: 100%;
+        height: auto;
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
 }
