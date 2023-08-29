@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+    font-family: "Neue Montreal Book";
+    src: url("../fonts/PPNeueMontreal-Book.woff");
+}
+
+@font-face{
+    font-family: "Neue Montreal Medium";
+    src: url("../fonts/PPNeueMontreal-Medium.woff");
+}
+
+@font-face{
+    font-family: "Editorial New Regular";
+    src: url("../fonts/PPEditorialNew-Regular.otf");
+}
+
+@font-face{
+    font-family: "Editorial New Ultraligh";
+    src: url("../fonts/PPEditorialNew-Ultralight.otf");
+}
+
+@font-face{
+    font-family: "Editorial New Ultraligh Italic";
+    src: url("../fonts/PPEditorialNew-UltralightItalic.otf");
+}
+
+.link{
+    @apply  transition duration-300 hover:text-white
+}
+
+.tarjeta{
+    @apply sm:w-full md:w-6/12 overflow-hidden rounded-md bg-white text-center text-sm lg:text-lg shadow-sm hover:shadow-xl
+}
+
+.titulo {
+    @apply font-editorialnewregular text-3xl lg:text-2xl mb-4 
+}
