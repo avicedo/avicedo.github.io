@@ -3578,7 +3578,7 @@ input[type="range"]:active::-webkit-slider-thumb{
 
 .link:hover{
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(4 120 87 / var(--tw-text-opacity));
 }
 
 .tarjeta{
