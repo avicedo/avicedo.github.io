@@ -5,62 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre mí - Andreu Vicedo - Diseño y letras</title>
     <link rel="stylesheet" href="css/output.css" />
-    <link rel="icon" type="image/x-icon" href="../public/img/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
     <script>document.documentElement.classList.add('js')</script>
+    <script src="comp/header.js"></script>
+    <script src="comp/footer.js"></script>
   </head>
   <body class="bg-gray-50 text-gray-600 font-neuemontrealbook">
     <div>
         <!--NAVBAR GENERAL-->
-      <div class="mb-4 mt-2" id="top">
-        <nav class="row-span-1">
-          <div class="hidden md:flex justify-evenly whitespace-nowrap text-lg font-neuemontrealmedium uppercase">
-            <a href="./index.html" class="link2 mr-8 mt-9 hover:bg-emerald-700 rounded-full px-3 py-2">Inicio</a>
-            <a href="./about.html#services" class="link2 mr-8 mt-9 hover:bg-emerald-700 rounded-full px-3 py-2">Servicios</a>
-            <a href="./proj.html" class="link2 mr-8 mt-9 hover:bg-emerald-700 rounded-full px-3 py-2">Proyectos</a>
-            <a href="./about.html" class="link2 mr-8 mt-9 hover:bg-emerald-700 rounded-full px-3 py-2">Sobre mí</a>
-          </div>
-          <div class="mr-14 mt-7 flex md:hidden justify-end" >
-            <button type="button" data-dropdown-toggle="dropdown">
-            <svg
-              class="w-10"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="h-6 w-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </button>
-          <div class="hidden text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown">
-            <div class="">
-            <ul class="py-1 block justify-start bg-gray-50" aria-labelledby="dropdown">
-            <li class>
-                <a href="./index.html" class="text-lg block px-4 py-2 text-gray-600 hover:underline decoration-emerald-700 decoration-2 underline-offset-2">Inicio</a>
-            </li>
-            <li>
-                <a href="./about.html#servicesm" class="text-lg block px-4 py-2 text-gray-600 hover:underline decoration-emerald-700 decoration-2 underline-offset-2">Servicios</a>
-            </li>
-            <li>
-                <a href="./proj.html" class="text-lg block px-4 py-2 text-gray-600 hover:underline decoration-emerald-700 decoration-2 underline-offset-2">Proyectos</a>
-            </li>
-            <li>
-                <a href="./about.html" class="text-lg block px-4 py-2 text-gray-600 hover:underline decoration-emerald-700 decoration-2 underline-offset-2">Sobre mí</a>
-            </li>
-            </ul>
-          </div>
-        </div>
-          </div>
-        </nav>
-      </div>
-      <div class="flex justify-center">
-        <hr class="mb-12 mt-2 h-0.5 w-10/12 border-t-2 bg-gray-700" />
-      </div>
+      <header-comp></header-comp>
       <!--End navigation-->
       <!--VERSION PC-->
       <main class="px-5 md:px-28 mt-10 hidden lg:block">
@@ -73,7 +26,7 @@
                 amante de las letras y descendiente de muy buena gente.
                 <br>
                 <br>
-                Mi pasión por la comunicación nace conmigo y me acompaña desde 
+                Mi amor por la comunicación nace conmigo y me acompaña desde 
                 que tengo uso de razón, tanto que de las primeras cosas que me decía
                 la gente de mi alrededor era «Este chiquillo va a ser político».
                 Por suerte me decanté por otra rama y estudié Comunicación Audiovisual, 
@@ -358,36 +311,7 @@
       </main>
     </div>
      <!--FOOTER GENERAL-->
-     <footer class="mt-20 bg-emerald-700 text-gray-100">
-        <div class="flex justify-evenly">
-          <div class="mt-6">
-            <h1 class="text-lg md:text-xl lg:text-2xl">Ayuda</h1>
-              <ul class="ml-4 text-sm leading-6 md:text-lg lg:text-xl" >
-                <li class="hover:text-gray-300"><a href="./about.html">Sobre mí</a></li>
-                <li class="hover:text-gray-300"><a href="./licence.html">Licencias</a></li>
-                <li class="hover:text-gray-300"><a href="./faq.html">F.A.Q.</a></li>
-              </ul>
-          </div>
-          <div class="mt-6">
-            <h1 class="text-lg md:text-xl lg:text-2xl">Networking</h1>
-            <ul class="ml-4 text-sm leading-6 md:text-lg lg:text-xl">
-              <li class="hover:text-gray-300"><a href="https://www.instagram.com/andreu_vicedo/">Instagram</a></li>
-              <li class="hover:text-gray-300"><a href="https://www.behance.net/andreuvicedo">Behance</a></li>
-              <li class="hover:text-gray-300"><a href="https://www.linkedin.com/in/avicedo/">LinkedIn</a></li>
-            </ul>
-          </div>
-          <div class="mt-6">
-            <a class="text-center hover:text-gray-300" href="#top">
-              <p class="text-lg md:text-xl lg:text-2xl">P'arriba</p>
-              <p class="text-4xl md:text-6xl">↑</p>
-            </a>
-          </div>
-          
-        </div>
-        <div class="text-center mt-6">
-          <p>Web desarrollada por mí usando Tailwindcss</p>
-        </div>
-    </footer>
+     <footer-comp></footer-comp>
         <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
         <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
     </body>

@@ -1,0 +1,279 @@
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projectes - Andreu Vicedo - Disseny i lletres</title>
+    <link rel="stylesheet" href="../css/output.css" />
+    <link rel="icon" type="image/x-icon" href="../img/favicon.svg">
+    <script>document.documentElement.classList.add('js')</script>
+    <script src="comp/header.js"></script>
+    <script src="comp/footer.js"></script>
+  </head>
+  <style>
+    .filterDiv {
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .container {
+      overflow: hidden;
+    }
+  </style>
+  <body class="bg-gray-50 text-gray-600 font-neuemontrealbook">
+    <div>
+        <!--NAVBAR GENERAL-->
+      <header-comp></header-comp>
+      <!--End navigation-->
+      <main class="wfull flex justify-center">
+        <div class="w-10/12">
+          <div id="myBtnContainer" class="flex flex-wrap justify-evenly mb-8 font-neuemontrealbook text-xl">
+            <div class="w-fit text-gray-700 hover:text-white hover:bg-emerald-700 rounded-full px-3 duration-200 py-2 mb-3">
+            <button class="btn active" onclick="filterSelection('all')"> Tot</button></div>
+            <div class="w-fit text-gray-700 hover:text-white hover:bg-emerald-700 rounded-full px-3 duration-200 py-2 mb-3">
+            <button class="btn" onclick="filterSelection('branding')"> Branding</button></div>
+            <div class="w-fit text-gray-700 hover:text-white hover:bg-emerald-700 rounded-full px-3 duration-200 py-2 mb-3">
+            <button class="btn" onclick="filterSelection('editorial')"> Disseny editorial  </button></div>
+            <div class="w-fit text-gray-700 hover:text-white hover:bg-emerald-700 rounded-full px-3 duration-200 py-2 mb-3">
+            <button class="btn" onclick="filterSelection('carteleria')"> Cartelleria</button></div>
+            <!--
+            <div class="w-fit text-gray-700 hover:text-white hover:bg-emerald-700 rounded-full px-3 duration-200 py-2 mb-3">
+            <button class="btn" onclick="filterSelection('tipografia')"> Tipografia</button></div>
+            -->
+            <div class="w-fit text-gray-700 hover:text-white hover:bg-emerald-700 rounded-full px-3 duration-200 py-2 mb-3">
+            <button class="btn" onclick="filterSelection('otros')"> Altres</button></div>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="overflow-hidden rounded-md bg-white text-center text-sm lg:text-lg shadow-sm hover:shadow-xl filterDiv branding">
+              <a href="./proj/pressupostos.html">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-full transform place-items-center duration-300 ease-in-out hover:scale-110"
+                    src="../img/pressupostos_porfolio.png"
+                    alt="Pressupostos Participatius - Redisseny de marca"
+                  />
+                </div>
+                <div>
+                  <div
+                    class="w-full py-5"
+                  >
+                    <a href="./proj/pressupostos.html" class="hover:text-emerald-700">Pressupostos Participatius</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="overflow-hidden rounded-md bg-white text-center text-sm lg:text-lg shadow-sm hover:shadow-xl filterDiv editorial">
+              <a href="./proj/signe.html">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-full transform place-items-center duration-300 ease-in-out hover:scale-110"
+                    src="../img/signe_porfolio.png"
+                    alt="Signe Magazine - Disseny editorial"
+                  />
+                </div>
+                <div>
+                  <div
+                    class="w-full py-5"
+                  >
+                    <a href="./proj/signe.html" class="hover:text-emerald-700">Revista Signe</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="overflow-hidden rounded-md bg-white text-center text-sm lg:text-lg shadow-sm hover:shadow-xl filterDiv branding">
+              <a href="./proj/gatzharria.html">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-full transform place-items-center duration-300 ease-in-out hover:scale-110"
+                    src="../img/gatzharria_porfolio.png"
+                    alt="Gatz-Harria - Disseny de marca"
+                  />
+                </div>
+                <div>
+                  <div
+                    class="w-full py-5"
+                  >
+                    <a href="./proj/gatzharria.html" class="hover:text-emerald-700">Gatz-Harria</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="overflow-hidden rounded-md bg-white text-center text-sm lg:text-lg shadow-sm hover:shadow-xl filterDiv editorial">
+              <a href="./proj/levante.html">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-full transform place-items-center duration-300 ease-in-out hover:scale-110"
+                    src="../img/levante_porfolio.png"
+                    alt="Levante-EMV - Disseny editorial"
+                  />
+                </div>
+                <div>
+                  <div
+                    class="w-full py-5"
+                  >
+                    <a href="./proj/levante.html" class="hover:text-emerald-700">Levante-EMV</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="overflow-hidden rounded-md bg-white text-center text-sm lg:text-lg shadow-sm hover:shadow-xl filterDiv otros">
+              <a href="./proj/lletrista.html">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-full transform place-items-center duration-300 ease-in-out hover:scale-110"
+                    src="../img/recuperacion_porfolio.png"
+                    alt="Recuperació de rètols"
+                  />
+                </div>
+                <div>
+                  <div
+                    class="w-full py-5"
+                  >
+                    <a href="./proj/lletrista.html" class="hover:text-emerald-700">Recuperació de rètols</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="overflow-hidden rounded-md bg-white text-center text-sm lg:text-lg shadow-sm hover:shadow-xl filterDiv otros">
+              <a href="./proj/mecana.html">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-full transform place-items-center duration-300 ease-in-out hover:scale-110"
+                    src="../img/mecana_porfolio.png"
+                    alt="Mecana Sans - Letterpress"
+                  />
+                </div>
+                <div>
+                  <div
+                    class="w-full py-5"
+                  >
+                    <a href="./proj/mecana.html" class="hover:text-emerald-700">Mecana sans</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="overflow-hidden rounded-md bg-white text-center text-sm lg:text-lg shadow-sm hover:shadow-xl filterDiv editorial">
+              <a href="./proj/consejos.html">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-full transform place-items-center duration-300 ease-in-out hover:scale-110"
+                    src="../img/ortotipo_porfolio.png"
+                    alt="Consejos de ortotipografía - Disseny editorial"
+                  />
+                </div>
+                <div>
+                  <div
+                    class="w-full py-5"
+                  >
+                    <a href="./proj/consejos.html" class="hover:text-emerald-700">Consejos de ortotipografía</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="overflow-hidden rounded-md bg-white text-center text-sm lg:text-lg shadow-sm hover:shadow-xl filterDiv branding">
+              <a href="./proj/maranta.html">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-full transform place-items-center duration-300 ease-in-out hover:scale-110"
+                    src="../img/maranta_porfolio.png"
+                    alt="Maranta Films - Disseny de marca"
+                  />
+                </div>
+                <div>
+                  <div
+                    class="w-full py-5"
+                  >
+                    <a href="./proj/maranta.html" class="hover:text-emerald-700">Maranta</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="overflow-hidden rounded-md bg-white text-center text-sm lg:text-lg shadow-sm hover:shadow-xl filterDiv branding">
+              <a href="./proj/kfc.html">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-full transform place-items-center duration-300 ease-in-out hover:scale-110"
+                    src="../img/kfc_porfolio.png"
+                    alt="KFC - Redisseny de marca"
+                  />
+                </div>
+                <div>
+                  <div
+                    class="w-full py-5"
+                  >
+                    <a href="./proj/kfc.html" class="hover:text-emerald-700">KFC</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="overflow-hidden rounded-md bg-white text-center text-sm lg:text-lg shadow-sm hover:shadow-xl filterDiv branding">
+              <a href="./proj/cruz.html">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-full transform place-items-center duration-300 ease-in-out hover:scale-110"
+                    src="../img/cruz_porfolio.png"
+                    alt="Cruz Blanca - Redisseny de packaging"
+                  />
+                </div>
+                <div>
+                  <div
+                    class="w-full py-5"
+                  >
+                    <a href="./proj/cruz.html" class="hover:text-emerald-700">Cruz Blanca</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="overflow-hidden rounded-md bg-white text-center text-sm lg:text-lg shadow-sm hover:shadow-xl filterDiv carteleria">
+              <a href="./proj/animalcoi.html">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-full transform place-items-center duration-300 ease-in-out hover:scale-110"
+                    src="../img/animalcoi_porfolio.png"
+                    alt="Animalcoi - Cartelleria"
+                  />
+                </div>
+                <div>
+                  <div
+                    class="w-full py-5"
+                  >
+                    <a href="./proj/animalcoi.html" class="hover:text-emerald-700">Cartelleria d'Animalcoi</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!--
+            <div class="overflow-hidden rounded-md bg-white text-center text-sm lg:text-lg shadow-sm hover:shadow-xl filterDiv tipografia">
+              <a href="./proj/geperudeta.html">
+                <div class="overflow-hidden">
+                  <img
+                    class="w-full transform place-items-center duration-300 ease-in-out hover:scale-110"
+                    src="../img/geperudeta.png"
+                    alt="Geperudeta Display - Font Design"
+                  />
+                </div>
+                <div>
+                  <div
+                    class="w-full py-5"
+                  >
+                    <a href="./proj/geperudeta.html" class="hover:text-emerald-700">Geperudeta Display</a>
+                  </div>
+                </div>
+              </a>
+            </div>
+            -->
+          </div>
+        </div>
+      </main>
+    </div>
+     <!--FOOTER GENERAL-->
+     <footer-comp></footer-comp>
+        <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+        <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+        <script src="../lib/sorting.js"></script>
+    </body>
+</html>
