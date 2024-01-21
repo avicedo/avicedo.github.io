@@ -136,3 +136,53 @@ function toggleDivs(obraNumber) {
       div.style.display = 'none';
     });
   }
+
+  function mostrarSubCategorias(buttonId) {
+    // Hide all additional button containers
+    esconderSubCategorias();
+
+    // Show the specific additional button container based on the clicked button
+    document.getElementById(`subCategoriaContainer${buttonId.charAt(buttonId.length-1)}`).style.display = 'flex';
+}
+
+function esconderSubCategorias() {
+    // Hide all additional button containers
+    for (let i = 1; i <= 4; i++) {
+        document.getElementById(`subCategoriaContainer${i}`).style.display = 'none';
+    }
+}
+
+function showCategory(category, value) {
+  // Get all list items
+  var items = document.getElementById('itemList').getElementsByClassName('list_element');
+
+  // Iterate through the items and show/hide based on the selected category and value
+  for (var i = 0; i < items.length; i++) {
+      var itemValues = {
+          decade: items[i].getAttribute('data-decade').split(' '),
+          a: items[i].getAttribute('data-a').split(' '),
+          b: items[i].getAttribute('data-b') ? items[i].getAttribute('data-b').split(' ') : [],
+          c: items[i].getAttribute('data-c').split(' ')
+      };
+
+      // Check if all selected filters match at least one value in the corresponding category
+      if (
+          (category === 'b' && itemValues[category].includes(value)) ||
+          (category !== 'b' && itemValues[category].includes(value))
+      ) {
+          items[i].style.display = ''; // Show the item
+      } else {
+          items[i].style.display = 'none'; // Hide the item
+      }
+  }
+}
+
+function showAllItems() {
+  // Get all list items
+  var items = document.getElementById('itemList').getElementsByTagName('li');
+
+  // Show all items
+  for (var i = 0; i < items.length; i++) {
+      items[i].style.display = '';
+  }
+}

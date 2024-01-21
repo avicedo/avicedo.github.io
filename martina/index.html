@@ -1,977 +1,1048 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="bg">
-    <div class="top">
-        <div class="taskbar">
-            <span>
-                <p class="task_info">THE MATRIX ARCHIVE</p>
-            </span>
-            <span>
-                <p class="task_info">VERSION 1.0</p>
-            </span>
-            <span class="task_info" id="datetime">
-            </span>
-            <div style="width: 41%;"></div>
-            <div class="icon_container" style="position: absolute; margin-left: 90%;">
-                <div class="separador" style="width: 3px; margin-left: 1px; margin-right: 1px;"></div>
-                <div class="bar_icon_right">
-                    <img src="img/min_button_tsk.svg" class="icon" style="transform: scale(1); margin-bottom: -5px;">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="bg">
+
+        <div class="top">
+            <div class="taskbar">
+                <span>
+                    <p class="task_info">THE MATRIX ARCHIVE</p>
+                </span>
+                <span>
+                    <p class="task_info">VERSION 1.0</p>
+                </span>
+                <span class="task_info" id="datetime">
+                </span>
+                <div style="width: 41%;"></div>
+                <div class="icon_container" style="position: absolute; margin-left: 90%;">
+                    <div class="separador" style="width: 3px; margin-left: 1px; margin-right: 1px;"></div>
+                    <div class="bar_icon_right">
+                        <img src="img/min_button_tsk.svg" class="icon" style="transform: scale(1); margin-bottom: -5px;">
+                    </div>
+                    <div class="separador" style="width: 3px; margin-left: 1px; margin-right: 1px;"></div>
+                    <div class="bar_icon_right">
+                        <img src="img/min_button_tsk_0.svg" class="icon" style="transform: scale(1); margin-bottom: -5px;">
+                    </div>
+                    <div class="separador" style="width: 3px; margin-left: 1px; margin-right: 1px;"></div>
                 </div>
-                <div class="separador" style="width: 3px; margin-left: 1px; margin-right: 1px;"></div>
-                <div class="bar_icon_right">
-                    <img src="img/min_button_tsk_0.svg" class="icon" style="transform: scale(1); margin-bottom: -5px;">
-                </div>
-                <div class="separador" style="width: 3px; margin-left: 1px; margin-right: 1px;"></div>
             </div>
+            
         </div>
-        
-    </div>
-    <div class="desktop"> 
-        <div class="ui-element-0" onclick="showWindow(0)" id="icon0" style="top: 120px; left: 90px;">
-            <img src="img/scroll.svg" alt="">
-            <span>Repositori General</span>
-        </div>
-        <div class="ui-element-0" onclick="showWindow(1)" id="icon1" style="top: 270px; left: 90px;">
-            <img src="img/pages.svg" alt="">
-            <span>El projecte</span>
-        </div>
-        <div class="ui-element-0" onclick="showWindow(2)" id="icon2" style="top: 110px; left: 299px;">
-            <img src="img/ui_icon_0.svg" alt="">
-            <span>Col·labora</span>
-        </div>
-        
 
-    </div>
-
-    <div class="draggable" onclick="bringToTop(0)" id="window0" style="top: 227px; left: 203px;">
-        <div style="max-height: 500px;">
-            <header class="bar">
-                <div class="icon_container">
-                    <div class="bar_icon_left">
-                        <img src="img/icon_bar.svg" class="icon" alt="">
-                    </div>
-                </div>
-                <div>
-                    <span class="bar_text">
-                        Repositori General
-                    </span>
-                </div>
-                <div style="width: 100%; display: block;">
-                    <div class="deco_bar">
-
-                    </div>
-                    <div class="deco_bar">
-
-                    </div>
-                </div>
-                <div class="icon_container">
-                    <div class="separador"></div>
-                    <div class="bar_icon_right">
-                        <img src="img/min_button.svg" class="icon" alt="" onclick="revertDivs()">
-                    </div>
-                    <div class="separador"></div>
-                    <div class="bar_icon_right">
-                        <img src="img/close_button.svg" onclick="hideWindow(0);revertDivs();" class="icon" alt="">
-                    </div>
-                    <div class="separador"></div>
-                </div>
-            </header>
-            <div class="window">
-                <section id="repositorio">
-                    <div class="content_container">
-                        <ul class="repo">
-                            <li class="list_element" onclick="toggleDivs(0)">All New Gen (1992 - 1995)</li>
-                            <li class="list_element" onclick="toggleDivs(1)">The File Room (1994 – 2013)</li>
-                            <li class="list_element" onclick="toggleDivs(2)">documenta:done (1997)</li>
-                            <li class="list_element" onclick="toggleDivs(3)">Mejor Vida Corp. (1998 – actiu.)</li>
-                            <li class="list_element" onclick="toggleDivs(4)">Darko Maver “L’artista inexistent” (1998 – 1999)</li>
-                            <li class="list_element" onclick="toggleDivs(5)">FloodNet (1998)</li>
-                            <li class="list_element" onclick="toggleDivs(6)">Hell.com (1999)</li>
-                            <li class="list_element" onclick="toggleDivs(7)">VoteAuction (2000 – 2020)</li>
-                            <li class="list_element" onclick="toggleDivs(8)">BorderXing Guide (2002)</li>
-                            <li class="list_element" onclick="toggleDivs(9)">Velvet Strikes (2002)</li>
-                            <li class="list_element" onclick="toggleDivs(10)">e-valencia.org (2002 - 2014)</li>
-                            <li class="list_element" onclick="toggleDivs(11)">Carnivore (2002 – 2016)</li>
-                            <li class="list_element" onclick="toggleDivs(12)">They Rule (2002 – actiu)</li>
-                            <li class="list_element" onclick="toggleDivs(13)">Webcam in Iraq. (2003 - 2004)</li>
-                            <li class="list_element" onclick="toggleDivs(14)">Dead – in – Iraq (2006 – 2011)</li>
-                            <li class="list_element" onclick="toggleDivs(15)">Oligarchy (2008)</li>
-                            <li class="list_element" onclick="toggleDivs(16)">Un Barrio Feliz. (2009 – 2010)</li>
-                            <li class="list_element" onclick="toggleDivs(17)">Transborder Immigrant Tool (2009 - 2012)</li>
-                            <li class="list_element" onclick="toggleDivs(18)">Torture Classics (2010)</li>
-                            <li class="list_element" onclick="toggleDivs(19)">Memetro (2010 – actiu.)</li>
-                            <li class="list_element" onclick="toggleDivs(20)">Phone Story (2012)</li>
-                            <li class="list_element" onclick="toggleDivs(21)">La Muerte sale por el oriente (2014 – 2017)</li>
-                            <li class="list_element" onclick="toggleDivs(22)">#PAYBLACKTIME (2016 - 2017)</li>
-                            <li class="list_element" onclick="toggleDivs(23)">Queering The Map (2017 – actiu.)</li>
-                            <li class="list_element" onclick="toggleDivs(24)">Elegy: GTA. Gun Homicides (2018 – 2019)</li>
-                            <li class="list_element" onclick="toggleDivs(25)">Democratic Socialist Simulator (2020)</li>
-                            <li class="list_element" onclick="toggleDivs(26)">Radio Alhara (2020 – actiu.)</li>
-                            <li class="list_element" onclick="toggleDivs(27)">Hannah Uncut (2021)</li>
-                            <li class="list_element" onclick="toggleDivs(28)">Filter For Good (2023)</li>
-                            <li class="list_element" onclick="toggleDivs(29)">Midgårds kundregister (2023)</li>
-                            <li class="list_element" onclick="toggleDivs(30)">Desmantelando la línea. (2023)</li>
-                        </ul>
-                    </div>
-                </section>
-                <section id="obra0" style="display: none;">
-                    <h1>All New Gen (1992 – 1995)</h1>
-                    <h2>VNS matrix</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Joc / CD room, el qual consisteix en una entitat femenina sense cos,
-                            que s’infiltra i saboteja el banc de dades d’un tal “Big Daddy”, un home de classe
-                            alta, qui és ajudat per Circuit Boy, un “tecno-xiquet” caracteritzat sense cap i amb
-                            un penis desproporcionat que es converteix en telèfon. L’objectiu del joc és
-                            col·laborar en el desordre mundial i acabar mb la falocràcia
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                All New Gen - VNS matrix
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra1" style="display: none;">
-                    <h1>The File Room (1994 – 2013)</h1>
-                    <h2>Antoni Muntadas i Randolf Street</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Arxiu obert i online on es publiquen casos de censura de tot tipus.
-                            També hi ha un apartat de publicacions al voltant de la censura, definicions del
-                            concepte…
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                The File Room - Antoni Muntadas i Randolf Street
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra2" style="display: none;">
-                    <h1>documenta:done (1997)</h1>
-                    <h2>Vuk Cosic</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Copia del lloc web de dokumenta X, després d’assabentar-se de la
-                            intenció dels organitzadors de tancar la web després de l’exposició en Kassel.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                documenta:done - Vul Cosic
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra3" style="display: none;">
-                    <h1>Mejor Vida Corp. (1998 – actiu.)</h1>
-                    <h2>Minerva Cuevas</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Corporació sense ànim de lucre que proveeix productes considerats
-                            de primera necessitat com per exemple tikets de metro (en aquest cas, de Ciutat
-                            de Mèxic), llavors màgiques, un bitllet de loteria, carnets d’universitats, gas
-                            lacrimògen… a més a més, ofereixen altres serveis de manera totalment gratuïta,
-                            com per exemple netejar les estacions de metro.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Mejor Vida Corp. - Minerva Cuevas
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra4" style="display: none;">
-                    <h1>Darko Maver “L’artista inexistent” (1998 – 1999)</h1>
-                    <h2>0100101110101101.org - Eva i Franco Mates</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Joc / CD room, el qual consisteix en una entitat femenina sense cos,
-                            que s’infiltra i saboteja el banc de dades d’un tal “Big Daddy”, un home de classe
-                            alta, qui és ajudat per Circuit Boy, un “tecno-xiquet” caracteritzat sense cap i amb
-                            un penis desproporcionat que es converteix en telèfon. L’objectiu del joc és
-                            col·laborar en el desordre mundial i acabar mb la falocràcia
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Darko Maver “L’artista inexistent” - Eva i Franco Mates
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra5" style="display: none;">
-                    <h1>FloodNet (1998)</h1>
-                    <h2>Electronic Disturbance Theater</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Seguda virtual. Quan els usuaris visiten FloodNet activen un applet de
-                            Java que recarregava els llocs webs governamentals de Mèxic i Estats Units,
-                            ralentitzant-la per excés de tràfic
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                FloodNet - Electronic Disturbance Theater
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra6" style="display: none;">
-                    <h1>Hell.com (1999)</h1>
-                    <h2>0100101110101101.org - Eva i Franco Mates</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Còpia de la pàgina Hell.com, una pàgina restrictiva que no deixava
-                            entrar a tothom. Va existit de 1995-2009. Es feien events d’art.net; el que veiem
-                            a la còpia és l’obra “Surface”.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Hell.com - Eva i Franco Mates
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra7" style="display: none;">
-                    <h1>VoteAuction (2000 – 2020)</h1>
-                    <h2>UBERMORGEN.ORG</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            àgina web que oferia als ciutadans d’Estats Units vendre el seu vot
-                            de les eleccions municipals dels 2000 al millor postor. La pàgina compta amb un
-                            fòrum de discussió, un registre dels vots presentats per a subhasta i un apartat
-                            per vendre i/o apostar pels vots. Actualment la pàgina actua de registre
-                            documental del projecte i inclou un arxiu on podem trobar tots els materials utilitzats
-                            en la creació del projecte, les denúncies que van rebre, els advocats qui els
-                            defengueren, fragments de premsa... etc.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                VoteAuction - UBERMORGEN.ORG
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra8" style="display: none;">
-                    <h1>Velvet Strikes (2002)</h1>
-                    <h2>Anne-Marie Schleiner, Joan Leandre i Brody Condon</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Un “mod” al “mod” del videojoc Half life, Counter-Strike, on
-                            s'introdueixen “grafittis” de protesta feminista, pacifista, antiguerra, pro-lgtbi…
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Velvet Strikes - Anne-Marie Schleiner, Joan Leandre i Brody Condon
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra9" style="display: none;">
-                    <h1>BorderXing Guide (2002)</h1>
-                    <h2>Heath Bunting</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Pàgina web on consultat documents sobre rutes a les quals es creuen
-                            fronteres sense haver de passar per duanes, controls d’immigració o policia de
-                            fronteres. El lloc web no és accessible a tothom, sinó que per accedir a la
-                            informació necessites o bé que l’artista et done la seua autorització o bé
-                            desplaçar-te fins uns dels llocs llistats per l’artista.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                BorderXing Guide - Heath Bunting
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra10" style="display: none;">
-                    <h1>e-valencia.org (2002 - 2014)</h1>
-                    <h2>Technologies to the People (Daniel García Andújar)</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Pàgina web que consisteix en un fòrum veïnal a través del qual els
-                            ciutadans de valència poden debatre sobre el que ocorre a la seua ciutat. També,
-                            per iniciativa de l’autor, existeixen e-barcelona, e-madrid, e-seoul, e-sevilla…..A
-                            pobles com Las Cuevas mantenen aquest sistema actiu. Els creats per TTP ja no
-                            estan actius.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                e-valencia.org - Technologies to the People (Daniel García Andújar)
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra11" style="display: none;">
-                    <h1>Carnivore (2002 – 2016)</h1>
-                    <h2>Radical Software Group</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Inspirat en el programa de vigilància de l’FBI, “Carnivore” crea un codi
-                            obert per ensenyar-nos com circulen les nostres dades a internet.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Carnivore - Radical Software Group
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra12" style="display: none;">
-                    <h1>They Rule (2002 – actiu)</h1>
-                    <h2>Josh On i Future Farmers</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Pàgina web interactiva per a visalitzar les dades de forma
-                            esquematitzada, de manera que es mostren les relacions les 87 companyies nord
-                            americanes més important a través d’una interfaç pertinent per a poder visibilitzar
-                            les relacions entre corporacions a través dels seus directius.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                They Rule - Josh On i Future Farmers
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra13" style="display: none;">
-                    <h1>Webcam in Iraq. (2003 - 2004)</h1>
-                    <h2>info@webcaminiraq.org</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Projecte pel qual es pretén col·locar una càmera web en un dels
-                            carrers més importants de Bagdad. El projecte té dues vertents: el primer és un
-                            visualitzador de vídeo a la mateixa pàgina web, el segon és un videomàping
-                            col·lectiu i internacional, per assolir-lo s’anima a qualsevol persona que dispose
-                            d’un ordenador a mappejar el contingut de la pàgina web a qualsevol ciutat, al lloc
-                            que desitje l’usuari.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Webcam in Iraq - info@webcaminiraq.org
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra14" style="display: none;">
-                    <h1>Dead – in – Iraq (2006 – 2011)</h1>
-                    <h2>Josep Delappe</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Performance / memorial, sobre la guerra d’Iraq en el joc online multi
-                            jugador “Americana Army”. El joc va ser creat com a ferramenta propagandística
-                            de l’exercit d’EE.UU. La performance consisteix en que l’artista introdueix al xat el
-                            nom, l’edat, branca del servei militar i data de la mort. (4484 noms)
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Dead – in – Iraq - Josep Delappe
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra15" style="display: none;">
-                    <h1>Oligarchy (2008)</h1>
-                    <h2>The molleindústria</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Joc online a través del qual el jugador simula ser un magnat del petroli.
-                            Al joc l’usuari ha de “explorar i perforar al voltant del món, corrompre polítics,
-                            detindre energies alternatives i augmentar l’addicció al petroli.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Oligarchy - The molleindústria
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra16" style="display: none;">
-                    <h1>Un Barrio Feliz. (2009 – 2010)</h1>
-                    <h2>Els veïns del barri de Lavapiés</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Blog creat pels veïns de Lavapiés, Madrid quan s’assabentaren que
-                            l’ajuntament pretenia ficar càmeres de vigilància al barri baix la premissa de
-                            controlar la criminalitat al barri. Al blog es comparteixen opinions, notícies... però
-                            també es duen a terme convocatòries artístiques i s’informen de mobilitzacions i
-                            altres accions polítiques contra la vigilància del barri.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Un Barrio Feliz. - Els veïns del barri de Lavapiés
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra17" style="display: none;">
-                    <h1>Transborder Immigrant Tool (2009 - 2012)</h1>
-                    <h2>Electronic Disturbance Theater</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Aplicació mòbil a través de la qual s’oferia informació per a poder
-                            creuar la frontera a Estats Units de manera segura. L’aplicació informava d’on hi
-                            havia aigua potable, on no hi havien controls de fronteres… també enviava
-                            poemes per a "assegurar el bon estat mental dels viatgers".
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Transborder Immigrant Tool - Electronic Disturbance Theater
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra18" style="display: none;">
-                    <h1>Torture Classics (2010)</h1>
-                    <h2>UBERMORGEN.org</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Recopilació online de les 60 cançons empleades a Guantànamo
-                            durant la tortura dels presoners per part de l’exercit nord-americà. A la web es
-                            mostra la llista, no sols et permet, sinó també et convida a descarregar les cançons
-                            de manera “pirata”.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Torture Classics - UBERMORGEN.org
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra19" style="display: none;">
-                    <h1>Memetro (2010 – actiu.)</h1>
-                    <h2>Els usuaris del metro.</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Pàgina web i aplicació mòbil a través de la qual alertar i informar sobre
-                            els controls de bitllets al metro de Barcelona. S’articula al voltant de l’enfermetat
-                            inventada de “memetro”, per la qual, qui la pateix sofreix de falta de memòria
-                            transitòria, provocant que s’oblide de picar el bitllet de metro.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Memetro - Els usuaris del metro.
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra20" style="display: none;">
-                    <h1>Phone Story (2012)</h1>
-                    <h2>The molleindústria</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Aplicació mòbil i pàgina web. Es tracta d’un joc que mostra les
-                            pràctiques deshumanitzadores que es porten a terme durant la fabricació del
-                            producte més utilitzat pels consumidors: el smartphone. A la pàgina web
-                            s’expliquen aquestes pràctiques.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Phone Story - The molleindústria
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra21" style="display: none;">
-                    <h1>La Muerte sale por el oriente (2014 – 2017)</h1>
-                    <h2>Sonia Madrigal</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Projecte fotogràfic online sobre la violencia extrema de gènere a
-                            mèxic. Consta de tres eixos: En primer lloc, un arxiu de fotografia documental
-                            ordenat de manera geogràfica; en segon lloc, una intervenció artística física,
-                            documentada amb fotografies, que consisteix en col·locar espills amb la forma
-                            d’una silueta femenina estratègicament als punts del país qualificat com a insegur
-                            per les dones; i per últim, un mapeig digital de feminicidis.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                La Muerte sale por el oriente - Sonia Madrigal
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra22" style="display: none;">
-                    <h1>#PAYBLACKTIME (2016 - 2017)</h1>
-                    <h2>Rafia Santana</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            A través d’un perfil de les xarxes socials, concretament de Facebook,
-                            l’artista anima als usuaris blancs a enviar diners via Paypal per a persones
-                            racialitzades; a la vegada, i a través del perfil, aquestes demanarien el que volen
-                            per menjar. Posteriorment ella els enviaria menjar a través de Grabhub, una
-                            plataforma de menjars a domicili.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                #PAYBLACKTIME - Rafia Santana
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra23" style="display: none;">
-                    <h1>Queering The Map (2017 – actiu.)</h1>
-                    <h2>Lucas de Larochelle</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Mapeig obert, col·lectiu, online i amb abast efectiu global,
-                            d’experiències queer.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Queering The Map - Lucas de Larochelle
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra24" style="display: none;">
-                    <h1>Elegy: GTA. Gun Homicides (2018 – 2019)</h1>
-                    <h2>Josep Delappe, Albert Elwin i Biane Collective</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Elegy és un mod que funciona com una visualització de dades en
-                            streaming al joc “GTA V”. Més que una performance, la intervenció és un
-                            “reenactment”, en temps real, que interpreta els homicidis per armes de foc
-                            enregistrats per “Gun Violence Archive”76. Va ser retransmès a la plataforma en
-                            linea de directes twitch durant un any: del 4 de juliol de 2018 fins el 4 de juliol del
-                            2019. La primera gravació de la cançó “God Bless America” (Kate Smith, 1938)
-                            acompanya la retransmissió en loop.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Elegy: GTA. Gun Homicides - Josep Delappe, Albert Elwin i Biane Collective
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra25" style="display: none;">
-                    <h1>Democratic Socialist Simulator (2020)</h1>
-                    <h2>The molleindústria</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Joc online a través del qual es simula una distòpia a través de la qual
-                            la social-democràcia funciona com els opositors difonen que funciona.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Democratic Socialist Simulator - The molleindústria
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra26" style="display: none;">
-                    <h1>Radio Alhara (2020 – actiu.)</h1>
-                    <h2>Yazan Khalili, Yousef Anastas, Elias Anastas, Said Abu Jaber y Mothanna
-                        Hussein</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Estació de ràdio en línia palestina que retransmet des de la ciutat de
-                            Betlem. A la seua pàgina web trobem un dispositiu de reproducció, per poder
-                            escoltar les retransmissions, i una bústia de missatges de manera que la ràdio pot
-                            rebre feedback dels oients. El seu Instagram (@radioalhara) funciona de ferramenta
-                            per la difusió dels seus programes, sessions musicals i altres activitats, però també
-                            fan una labor de difusió de plataformes d’ajuda humanitària en solidaritat amb
-                            Palestina.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Radio Alhara - Yazan Khalili, Yousef Anastas, Elias Anastas, Said Abu Jaber y Mothanna
-                                Hussein
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra27" style="display: none;">
-                    <h1>Hannah Uncut (2021)</h1>
-                    <h2>0100101110101101.org - Eva i Franco Mates</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Així com feren a “Riccardo Uncut” a 2018, els artistes publicaren a les
-                            xarxes socials un anunci de compra del mòbil de qui fora per 1000€ amb la
-                            premissa que, tots els arxius al mòbil servirien per fer un projecte artístic: un “arxiu
-                            vital”, el qual serà exposat a institucions museístiques, però també a internet.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Hannah Uncut - Eva i Franco Mates
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra27" style="display: none;">
-                    <h1>Filter For Good (2023)</h1>
-                    <h2>Jourdan Johnson // @XoJourdanlouise</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Un filtre a la plataforma Tik Tok a través del qual has de conduir una
-                            porció de sindria (símbol de la lluita palestina) per un curt recorregut.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Filter For Good - Jourdan Johnson
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra28" style="display: none;">
-                    <h1>All New Gen (1992 – 1995)</h1>
-                    <h2>Autor(s): VNS matrix</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Joc / CD room, el qual consisteix en una entitat femenina sense cos,
-                            que s’infiltra i saboteja el banc de dades d’un tal “Big Daddy”, un home de classe
-                            alta, qui és ajudat per Circuit Boy, un “tecno-xiquet” caracteritzat sense cap i amb
-                            un penis desproporcionat que es converteix en telèfon. L’objectiu del joc és
-                            col·laborar en el desordre mundial i acabar mb la falocràcia
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                All New Gen - VNS matrix
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra29" style="display: none;">
-                    <h1>Midgårds kundregister (2023)</h1>
-                    <h2>Col·lectiu antifeixista suec</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            Obtenció/Hackeig de la base de dades de logística d’una de les
-                            distribuïdores de música (CD, vinils...), llibres i de més merchandising d’ideologia
-                            nazi, més importants d’Europa: Midgård. A través d’una pàgina web, els
-                            antifeixistes han publicat el registre de comandes a la empresa on s’inclouen les
-                            dades del client (nom, direcció, correu electrònic, número de telèfon...) i el
-                            contingut de la seua comanda. A l’inici de la pàgina s’inclou un manifest.
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Midgårds kundregister - Col·lectiu antifeixista suec
-                            </div>
-                        </div>   
-                    </div>
-                </section>
-                <section id="obra30" style="display: none;">
-                    <h1>Desmantelando la línea. (2023)</h1>
-                    <h2>Joel Chaou Latorre</h2>
-                    <div class="content_container">
-                        
-                        <p class="entry">
-                            documental interactiu centrat en el tancament de la línia
-                            convencional de Madrid-Cuenca-Utiel, on es convida els usuaris a descobrir, a
-                            través de les històries dels seus protagonistes, l'origen i el tancament d'una via
-                            històrica que va connectar la capital d'Espanya amb el Medite
-                        </p>
-                        <div class="img_cont">
-                            <img src="img/4byte_burg.png" alt="" class="img">
-                            <div class="infobox">
-                                Desmantelando la línean - Joel Chaou Latorre
-                            </div>
-                        </div>   
-                    </div>
-                </section>
+        <div class="desktop"> 
+            <div class="ui-element-0" onclick="showWindow(0)" id="icon0" style="top: 120px; left: 90px;">
+                <img src="img/scroll.svg" alt="">
+                <span>Repositori General</span>
             </div>
-            <footer class="ui_footer" id="footer_general">
+            <div class="ui-element-0" onclick="showWindow(1)" id="icon1" style="top: 270px; left: 90px;">
+                <img src="img/pages.svg" alt="">
+                <span>El projecte</span>
+            </div>
+            <div class="ui-element-0" onclick="showWindow(2)" id="icon2" style="top: 110px; left: 299px;">
+                <img src="img/ui_icon_0.svg" alt="">
+                <span>Col·labora</span>
+            </div>
+            <div class="ui-element-0" onclick="showWindow(3)" id="icon2" style="top: 110px; left: 1430px;">
+                <img src="img/folder.svg" alt="">
+                <span>Xarxes</span>
+            </div>
+            
 
-            </footer>
-            <footer class="ui_footer" id="footer_obra0" style="display: none;">
-                <a class="footer_link" href="https://vnsmatrix.net/projects/all-new-gen">https://vnsmatrix.net/projects/all-new-gen</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra1" style="display: none;">
-                <a class="footer_link" href="http://www.thefileroom.org/">http://www.thefileroom.org/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra2" style="display: none;">
-                <a class="footer_link" href="http://www.ljudmila.org/~vuk/dx/">http://www.ljudmila.org/~vuk/dx/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra3" style="display: none;">
-                <a class="footer_link" href="https://www.irational.org/mvc/">https://www.irational.org/mvc/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra4" style="display: none;">
-                <a class="footer_link" href="https://0100101110101101.org/darko-maver/">https://0100101110101101.org/darko-maver/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra5" style="display: none;">
-                <a class="footer_link" href="https://sites.rhizome.org/anthology/floodnet.html">https://sites.rhizome.org/anthology/floodnet.html</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra6" style="display: none;">
-                <a class="footer_link" href="https://0100101110101101.org/copy-of-hell-com/">https://0100101110101101.org/copy-of-hell-com/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra7" style="display: none;">
-                <a class="footer_link" href="https://vote-auction.net/">https://vote-auction.net/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra8" style="display: none;">
-                <a class="footer_link" href="https://www.opensorcery.net/velvet-strike/about.html">https://www.opensorcery.net/velvet-strike/about.html</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra9" style="display: none;">
-                <a class="footer_link" href="https://www.irational.org/heath/borderxing/home.html">https://www.irational.org/heath/borderxing/home.html</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra10" style="display: none;">
-                <a class="footer_link" href="https://web.archive.org/web/20191104103325/http://e-valencia.org/">https://web.archive.org/web/20191104103325/http://e-valencia.org/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra11" style="display: none;">
-                <a class="footer_link" href="http://r-s-g.org/carnivore/">http://r-s-g.org/carnivore/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra12" style="display: none;">
-                <a class="footer_link" href="https://theyrule.net/">https://theyrule.net/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra13" style="display: none;">
-                <a class="footer_link" href="https://web.archive.org/web/20030202065921/http://www.webcaminiraq.org/">https://web.archive.org/web/20030202065921/http://www.webcaminiraq.org/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra14" style="display: none;">
-                <a class="footer_link" href="https://www.delappe.net/dead-in-iraq">https://www.delappe.net/dead-in-iraq</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra15" style="display: none;">
-                <a class="footer_link" href="https://molleindustria.org/en/oiligarchy/">https://molleindustria.org/en/oiligarchy/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra16" style="display: none;">
-                <a class="footer_link" href="https://unbarriofeliz.wordpress.com/">https://unbarriofeliz.wordpress.com/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra17" style="display: none;">
-                <a class="footer_link" href="https://anthology.rhizome.org/transborder-immigrant-tool">https://anthology.rhizome.org/transborder-immigrant-tool</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra18" style="display: none;">
-                <a class="footer_link" href="https://www.tortureclassics.com/">https://www.tortureclassics.com/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra19" style="display: none;">
-                <a class="footer_link" href="http://www.memetro.net/">http://www.memetro.net/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra20" style="display: none;">
-                <a class="footer_link" href="https://www.phonestory.org/">https://www.phonestory.org/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra21" style="display: none;">
-                <a class="footer_link" href="http://soniamadrigal.com/lamuertesaleporeloriente/">http://soniamadrigal.com/lamuertesaleporeloriente/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra22" style="display: none;">
-                <a class="footer_link" href="https://www.facebook.com/PayBlackTime/">https://www.facebook.com/PayBlackTime/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra23" style="display: none;">
-                <a class="footer_link" href="https://www.queeringthemap.com/">https://www.queeringthemap.com/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra24" style="display: none;">
-                <a class="footer_link" href="https://www.delappe.net/elegy-gta-usa-homicides">https://www.delappe.net/elegy-gta-usa-homicides</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra25" style="display: none;">
-                <a class="footer_link" href="https://www.molleindustria.org/demsocsim/">https://www.molleindustria.org/demsocsim/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra26" style="display: none;">
-                <a class="footer_link" href="https://www.radioalhara.net/">https://www.radioalhara.net/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra27" style="display: none;">
-                <a class="footer_link" href="https://0100101110101101.org/hannah-uncut/">https://0100101110101101.org/hannah-uncut/</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra28" style="display: none;">
-                <a class="footer_link" href="https://www.tiktok.com/@xojourdanlouise">https://www.tiktok.com/@xojourdanlouise</a>
-            </footer>
-            <footer class="ui_footer" id="footer_obra30" style="display: none;">
-                <a class="footer_link" href="https://midgard.antifa.se/">https://midgard.antifa.se/</a>
-            </footer>
         </div>
-    </div>
-    <div class="draggable" onclick="bringToTop(1)" id="window1" style="top: 215px; left: 866px;">
-        <div class="window">
-            <header class="bar">
-                <div class="icon_container">
-                    <div class="bar_icon_left">
-                        <img src="img/icon_bar.svg" class="icon" alt="">
-                    </div>
-                </div>
-                <div>
-                    <span class="bar_text">
-                        El projecte
-                    </span>
-                </div>
-                <div style="width: 100%; display: block;">
-                    <div class="deco_bar">
 
-                    </div>
-                    <div class="deco_bar">
-
-                    </div>
-                </div>
-                <div class="icon_container">
-                    <div class="separador"></div>
-                    <div class="bar_icon_right">
-                        <img src="img/min_button.svg" class="icon" alt="">
-                    </div>
-                    <div class="separador"></div>
-                    <div class="bar_icon_right">
-                        <img src="img/close_button.svg" onclick="hideWindow(1)" class="icon" alt="">
-                    </div>
-                    <div class="separador"></div>
-                </div>
-            </header>
-            <section>
-                <div class="content_container">
-                    
-                    <p class="entry">
-                        Asperiores distinctio nemo et qui accusantium possimus tempora. Assumenda repudiandae eos qui ullam asperiores. Impedit voluptates voluptas iste. Asperiores ipsam assumenda est est temporibus ducimus quaerat qui.
-                        Id dolores error quia sequi placeat hic. Non odit alias magni. Odio qui officia quibusdam porro id.
-                        Ut similique quia omnis debitis. Dolorem quos dicta necessitatibus dolor qui dolore eveniet. Eius dolorem tempora assumenda sit est. Dicta quaerat commodi iure iusto velit.
-                        Fuga temporibus quia nihil molestias quia. Iusto repudiandae distinctio sequi. Et debitis laborum sit molestias tempore sit dicta sapiente. Est vero est officia inventore voluptas at. Quo recusandae voluptates commodi officiis.
-                        Et velit qui impedit laudantium modi. Voluptatem consequatur dolores ullam. Minima dignissimos doloribus ipsa qui tempora aperiam fugiat corporis. Sint modi et amet minus necessitatibus non magni temporibus.
-                        
-                    </p>
-                    <div class="img_cont">
-                        <img src="img/4byte_burg.png" alt="" class="img">
-                        <div class="infobox">
-                            Four-Byte Burger (Jack Haegar, 1985, re-digitized by Stuart Brown)
+        <div class="draggable" onclick="bringToTop(0)" id="window0" style="top: 227px; left: 203px;">
+            <div style="max-height: 500px;">
+                <header class="bar">
+                    <div class="icon_container">
+                        <div class="bar_icon_left">
+                            <img src="img/icon_bar.svg" class="icon" alt="">
                         </div>
-                    </div>   
-                </div>
-            </section>
-            <footer class="ui_footer">
+                    </div>
+                    <div>
+                        <span class="bar_text">
+                            Repositori General
+                        </span>
+                    </div>
+                    <div style="width: 100%; display: block;">
+                        <div class="deco_bar">
 
-            </footer>
-        </div>
-    </div>
-    <div class="draggable" onclick="bringToTop(2)" id="window2" style="top: 93px; left: 426px;">
-        <div class="window">
-            <header class="bar">
-                <div class="icon_container">
-                    <div class="bar_icon_left">
-                        <img src="img/icon_bar.svg" class="icon" alt="">
-                    </div>
-                </div>
-                <div>
-                    <span class="bar_text">
-                        Col·labora
-                    </span>
-                </div>
-                <div style="width: 100%; display: block;">
-                    <div class="deco_bar">
+                        </div>
+                        <div class="deco_bar">
 
+                        </div>
                     </div>
-                    <div class="deco_bar">
-
+                    <div class="icon_container">
+                        <div class="separador"></div>
+                        <div class="bar_icon_right">
+                            <img src="img/min_button.svg" class="icon" alt="" onclick="revertDivs()">
+                        </div>
+                        <div class="separador"></div>
+                        <div class="bar_icon_right">
+                            <img src="img/close_button.svg" onclick="hideWindow(0);revertDivs();" class="icon" alt="">
+                        </div>
+                        <div class="separador"></div>
                     </div>
-                </div>
-                <div class="icon_container">
-                    <div class="separador"></div>
-                    <div class="bar_icon_right">
-                        <img src="img/min_button.svg" class="icon" alt="">
-                    </div>
-                    <div class="separador"></div>
-                    <div class="bar_icon_right">
-                        <img src="img/close_button.svg" onclick="hideWindow(2)" class="icon" alt="">
-                    </div>
-                    <div class="separador"></div>
-                </div>
-            </header>
-            <section>
-                <div class="window">
-                    <h1>Vols col·laborar?</h1>
-                    <h2>
-                        A THE MATRIX ARCHIVE estem sempre oberts a ampliar el nostre arxiu d'obres. 
-                        Si estàs interessat/da per favor emplena els camps de baix amb la informació 
-                        de l'obra que conegues.
-                    </h2>
-                    <div class="form">
+                </header>
+                <div class="window" style="overflow: auto;">
+                    <section id="repositorio" style="overflow: auto;">
                         <div style="display: flex;">
-                            <div>
-                                <p>Nom de l'obra</p>
-                                <input class="small" type="text" id="name" name="name" required>
-                            </div>
-                            <div>
-                                <p>Autor/es</p>
-                                <input class="small" type="text" id="authors" name="authors" required>
-                            </div>
-                            <div>
-                                <p>Any/s</p>
-                                <input style="width: 100px;" class="small" type="number" id="years" name="years" required>
-                            </div>
+                            <button class="boton" onclick="mostrarSubCategorias('button1')">Data</button>
+                            <button class="boton" onclick="mostrarSubCategorias('button2')">Grau d'acció i beligerància</button>
+                            <button class="boton" onclick="mostrarSubCategorias('button3')">Tipologia web</button>
+                            <button class="boton" onclick="mostrarSubCategorias('button4')">Gènere de net.art</button>
+                            <button class="boton" onclick="showAllItems()">Mostra-ho tot</button>
                         </div>
-                        <div>
-                            <p>Descripció de l'obra</p>
-                            <textarea name="Text1" cols="40" rows="5"></textarea>
+                        <div style="height: 1px; background-color: white; width: 95%; margin-left: auto; margin-right: auto; margin-top: 8px;"></div>
+                        <div id="subCategoriaContainer1" class="subCategoriaContainer">
+                            <button class="boton" onclick="showCategory('decade', '90s')">90s</button>
+                            <button class="boton" onclick="showCategory('decade', '00s')">00s</button>
+                            <button class="boton" onclick="showCategory('decade', '10s')">10s</button>
+                            <button class="boton" onclick="showCategory('decade', '20s')">20s</button>
                         </div>
-                        <div style="display: flex; margin-bottom: 10px;">
-                            <div style="display: block;">
-                                <p>Adjunta una imatge representativa</p>
-                                <input style="font-size: 14px;" type="file" id="attachment" name="attachment">
-                            </div>
-                            <button class="enviar">
-                                <p>Enviar</p>
-                            </button>
+                        <div id="subCategoriaContainer2" class="subCategoriaContainer">
+                            <button class="boton" onclick="showCategory('a', 'a1')">Ciberguerra o hacktivisme</button>
+                            <button class="boton" onclick="showCategory('a', 'a2')">Infoguerra o propaganda activista</button>
+                        </div>
+                        <div id="subCategoriaContainer3" class="subCategoriaContainer">
+                            <button class="boton" onclick="showCategory('b', 'b1')">Aplicació mòbil</button>
+                            <button class="boton" onclick="showCategory('b', 'b2')">Pàgina web</button>
+                            <button class="boton" onclick="showCategory('b', 'b3')">Fòrums</button>
+                            <button class="boton" onclick="showCategory('b', 'b4')">Blogs</button>
+                            <button class="boton" onclick="showCategory('b', 'b5')">Arxius web</button>
+                            <button class="boton" onclick="showCategory('b', 'b6')">Rèpliques de pàgines web</button>
+                            <button class="boton" onclick="showCategory('b', 'b7')">Xarxes socials</button>
+                            <button class="boton" onclick="showCategory('b', 'b8')">Comerç electrònic</button>
+                        </div>
+                        <div id="subCategoriaContainer4" class="subCategoriaContainer">
+                            <button class="boton" onclick="showCategory('c', 'c1')">Fakes</button>
+                            <button class="boton" onclick="showCategory('c', 'c2')">Jocs</button>
+                            <button class="boton" onclick="showCategory('c', 'c3')">Comunicació</button>
+                            <button class="boton" onclick="showCategory('c', 'c4')">Data based art</button>
+                            <button class="boton" onclick="showCategory('c', 'c5')">Performance</button>
+                        </div>
+                        <div class="content_container">
+                            <ul class="repo" id="itemList">
+                                <li class="list_element" onclick="toggleDivs(0)" data-decade="90s" data-a="a2" data-b="" data-c="c2">All New Gen (1992 - 1995)</li>
+                                <li class="list_element" onclick="toggleDivs(1)" data-decade="90s 00s 10s" data-a="a2" data-b="b2" data-c="c3">The File Room (1994 – 2013)</li>
+                                <li class="list_element" onclick="toggleDivs(2)" data-decade="90s" data-a="a2" data-b="b6" data-c="c1">documenta:done (1997)</li>
+                                <li class="list_element" onclick="toggleDivs(3)" data-decade="90s 00s 10s 20s" data-a="a2" data-b="b8" data-c="c1">Mejor Vida Corp. (1998 – actiu.)</li>
+                                <li class="list_element" onclick="toggleDivs(4)" data-decade="90s" data-a="a2" data-b="" data-c="c1 c5">Darko Maver “L’artista inexistent” (1998 – 1999)</li>
+                                <li class="list_element" onclick="toggleDivs(5)" data-decade="90s" data-a="a1" data-b="" data-c="c5">FloodNet (1998)</li>
+                                <li class="list_element" onclick="toggleDivs(6)" data-decade="90s" data-a="a2" data-b="b6" data-c="c1">Hell.com (1999)</li>
+                                <li class="list_element" onclick="toggleDivs(7)" data-decade="00s" data-a="a2" data-b="b2" data-c="c1">BorderXing Guide (2002)</li>
+                                <li class="list_element" onclick="toggleDivs(8)" data-decade="00s 10s 20s" data-a="a2" data-b="b8" data-c="c1">VoteAuction (2000 – 2020)</li>
+                                <li class="list_element" onclick="toggleDivs(9)" data-decade="00s" data-a="a1" data-b="" data-c="c2">Velvet Strikes (2002)</li>
+                                <li class="list_element" onclick="toggleDivs(10)" data-decade="00s 10s" data-a="a2" data-b="b3" data-c="c3">e-valencia.org (2002 - 2014)</li>
+                                <li class="list_element" onclick="toggleDivs(11)" data-decade="00s 10s" data-a="" data-b="b2" data-c="c4">Carnivore (2002 – 2016)</li>
+                                <li class="list_element" onclick="toggleDivs(12)" data-decade="00s 10s 20s" data-a="a2" data-b="b2" data-c="c4">They Rule (2002 – actiu)</li>
+                                <li class="list_element" onclick="toggleDivs(13)" data-decade="00s" data-a="a2" data-b="b2" data-c="c3">Webcam in Iraq. (2003 - 2004)</li>
+                                <li class="list_element" onclick="toggleDivs(14)" data-decade="00s 10s" data-a="a2" data-b="b2" data-c="c5">Dead – in – Iraq (2006 – 2011)</li>
+                                <li class="list_element" onclick="toggleDivs(15)" data-decade="00s" data-a="a2" data-b="b1" data-c="c2">Oligarchy (2008)</li>
+                                <li class="list_element" onclick="toggleDivs(16)" data-decade="00s 10s" data-a="a2" data-b="b3" data-c="c3">Un Barrio Feliz. (2009 – 2010)</li>
+                                <li class="list_element" onclick="toggleDivs(17)" data-decade="00s 10s" data-a="a1" data-b="b1" data-c="c3">Transborder Immigrant Tool (2009 - 2012)</li>
+                                <li class="list_element" onclick="toggleDivs(18)" data-decade="10s" data-a="a2" data-b="b2" data-c="c1">Torture Classics (2010)</li>
+                                <li class="list_element" onclick="toggleDivs(19)" data-decade="10s 20s" data-a="a1" data-b="b1" data-c="c3">Memetro (2010 – actiu.)</li>
+                                <li class="list_element" onclick="toggleDivs(20)" data-decade="10s" data-a="a2" data-b="b1 b2" data-c="c2">Phone Story (2012)</li>
+                                <li class="list_element" onclick="toggleDivs(21)" data-decade="10s" data-a="a2" data-b="b2 b7" data-c="c4">La Muerte sale por el oriente (2014 – 2017)</li>
+                                <li class="list_element" onclick="toggleDivs(22)" data-decade="10s" data-a="a1" data-b="b7" data-c="c3">#PAYBLACKTIME (2016 - 2017)</li>
+                                <li class="list_element" onclick="toggleDivs(23)" data-decade="10s 20s" data-a="a2" data-b="b2" data-c="c4">Queering The Map (2017 – actiu.)</li>
+                                <li class="list_element" onclick="toggleDivs(24)" data-decade="10s" data-a="a2" data-b="" data-c="c2 c5">Elegy: GTA. Gun Homicides (2018 – 2019)</li>
+                                <li class="list_element" onclick="toggleDivs(25)" data-decade="20s" data-a="a2" data-b="b2" data-c="c2">Democratic Socialist Simulator (2020)</li>
+                                <li class="list_element" onclick="toggleDivs(26)" data-decade="20s" data-a="a2" data-b="b2 b7" data-c="c3">Radio Alhara (2020 – actiu.)</li>
+                                <li class="list_element" onclick="toggleDivs(27)" data-decade="20s">Hannah Uncut (2021)</li>
+                                <li class="list_element" onclick="toggleDivs(28)" data-decade="20s" data-a="a2" data-b="b7" data-c="c2">Filter For Good (2023)</li>
+                                <li class="list_element" onclick="toggleDivs(30)" data-decade="20s" data-a="a2" data-b="b2" data-c="c3">Desmantelando la línea. (2023)</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section id="obra0" style="display: none;">
+                        <h1>All New Gen (1992 – 1995)</h1>
+                        <h2>VNS matrix</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Joc / CD room, el qual consisteix en una entitat femenina sense cos,
+                                que s’infiltra i saboteja el banc de dades d’un tal “Big Daddy”, un home de classe
+                                alta, qui és ajudat per Circuit Boy, un “tecno-xiquet” caracteritzat sense cap i amb
+                                un penis desproporcionat que es converteix en telèfon. L’objectiu del joc és
+                                col·laborar en el desordre mundial i acabar mb la falocràcia
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/1.jpg" alt="" class="img">
+                                <div class="infobox">
+                                    All New Gen - VNS matrix
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra1" style="display: none;">
+                        <h1>The File Room (1994 – 2013)</h1>
+                        <h2>Antoni Muntadas i Randolf Street</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Arxiu obert i online on es publiquen casos de censura de tot tipus.
+                                També hi ha un apartat de publicacions al voltant de la censura, definicions del
+                                concepte…
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/2.gif" alt="" class="img">
+                                <div class="infobox">
+                                    The File Room - Antoni Muntadas i Randolf Street
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra2" style="display: none;">
+                        <h1>documenta:done (1997)</h1>
+                        <h2>Vuk Cosic</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Copia del lloc web de dokumenta X, després d’assabentar-se de la
+                                intenció dels organitzadors de tancar la web després de l’exposició en Kassel.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/3.png" alt="" class="img">
+                                <div class="infobox">
+                                    documenta:done - Vul Cosic
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra3" style="display: none;">
+                        <h1>Mejor Vida Corp. (1998 – actiu.)</h1>
+                        <h2>Minerva Cuevas</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Corporació sense ànim de lucre que proveeix productes considerats
+                                de primera necessitat com per exemple tikets de metro (en aquest cas, de Ciutat
+                                de Mèxic), llavors màgiques, un bitllet de loteria, carnets d’universitats, gas
+                                lacrimògen… a més a més, ofereixen altres serveis de manera totalment gratuïta,
+                                com per exemple netejar les estacions de metro.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/4.gif" alt="" class="img">
+                                <div class="infobox">
+                                    Mejor Vida Corp. - Minerva Cuevas
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra4" style="display: none;">
+                        <h1>Darko Maver “L’artista inexistent” (1998 – 1999)</h1>
+                        <h2>0100101110101101.org - Eva i Franco Mates</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Inventen un artista, Darko Maver, originari de l’antiga Iugoslàvia, amb un treball grotesc i molt influenciat per la guerra: escultures a escala humana fetes amb cera, goma i teles. Les imatges que documentaven les obres -inexistentseren imatges grotesques que circulaven per la xarxa. A l’abril de 1999 fingeixen la seua mort amb una fotografia, simulant que havia mort al bombardeig de la OTAN. L’objectiu de l’obra és criticar el cinisme de l’art mercantilitzat enfront les problemàtiques globals reals.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/5.jpg" alt="" class="img">
+                                <div class="infobox">
+                                    Darko Maver “L’artista inexistent” - Eva i Franco Mates
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra5" style="display: none;">
+                        <h1>FloodNet (1998)</h1>
+                        <h2>Electronic Disturbance Theater</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Seguda virtual. Quan els usuaris visiten FloodNet activen un applet de
+                                Java que recarregava els llocs webs governamentals de Mèxic i Estats Units,
+                                ralentitzant-la per excés de tràfic
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/6.png" alt="" class="img">
+                                <div class="infobox">
+                                    FloodNet - Electronic Disturbance Theater
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra6" style="display: none;">
+                        <h1>Hell.com (1999)</h1>
+                        <h2>0100101110101101.org - Eva i Franco Mates</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Còpia de la pàgina Hell.com, una pàgina restrictiva que no deixava
+                                entrar a tothom. Va existit de 1995-2009. Es feien events d’art.net; el que veiem
+                                a la còpia és l’obra “Surface”.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/7.png" alt="" class="img">
+                                <div class="infobox">
+                                    Hell.com - Eva i Franco Mates
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra7" style="display: none;">
+                        <h1>VoteAuction (2000 – 2020)</h1>
+                        <h2>UBERMORGEN.ORG</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Pàgina web que oferia als ciutadans d’Estats Units vendre el seu vot
+                                de les eleccions municipals dels 2000 al millor postor. La pàgina compta amb un
+                                fòrum de discussió, un registre dels vots presentats per a subhasta i un apartat
+                                per vendre i/o apostar pels vots. Actualment la pàgina actua de registre
+                                documental del projecte i inclou un arxiu on podem trobar tots els materials utilitzats
+                                en la creació del projecte, les denúncies que van rebre, els advocats qui els
+                                defengueren, fragments de premsa... etc.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/8.gif" alt="" class="img">
+                                <div class="infobox">
+                                    VoteAuction - UBERMORGEN.ORG
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra8" style="display: none;">
+                        <h1>Velvet Strikes (2002)</h1>
+                        <h2>Anne-Marie Schleiner, Joan Leandre i Brody Condon</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Un “mod” al “mod” del videojoc Half life, Counter-Strike, on
+                                s'introdueixen “grafittis” de protesta feminista, pacifista, antiguerra, pro-lgtbi…
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/9.jpg" alt="" class="img">
+                                <div class="infobox">
+                                    Velvet Strikes - Anne-Marie Schleiner, Joan Leandre i Brody Condon
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra9" style="display: none;">
+                        <h1>BorderXing Guide (2002)</h1>
+                        <h2>Heath Bunting</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Pàgina web on consultat documents sobre rutes a les quals es creuen
+                                fronteres sense haver de passar per duanes, controls d’immigració o policia de
+                                fronteres. El lloc web no és accessible a tothom, sinó que per accedir a la
+                                informació necessites o bé que l’artista et done la seua autorització o bé
+                                desplaçar-te fins uns dels llocs llistats per l’artista.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/10.gif" alt="" class="img">
+                                <div class="infobox">
+                                    BorderXing Guide - Heath Bunting
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra10" style="display: none;">
+                        <h1>e-valencia.org (2002 - 2014)</h1>
+                        <h2>Technologies to the People (Daniel García Andújar)</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Pàgina web que consisteix en un fòrum veïnal a través del qual els
+                                ciutadans de valència poden debatre sobre el que ocorre a la seua ciutat. També,
+                                per iniciativa de l’autor, existeixen e-barcelona, e-madrid, e-seoul, e-sevilla…..A
+                                pobles com Las Cuevas mantenen aquest sistema actiu. Els creats per TTP ja no
+                                estan actius.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/11.png" alt="" class="img">
+                                <div class="infobox">
+                                    e-valencia.org - Technologies to the People (Daniel García Andújar)
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra11" style="display: none;">
+                        <h1>Carnivore (2002 – 2016)</h1>
+                        <h2>Radical Software Group</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Inspirat en el programa de vigilància de l’FBI, “Carnivore” crea un codi
+                                obert per ensenyar-nos com circulen les nostres dades a internet.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/12.gif" alt="" class="img">
+                                <div class="infobox">
+                                    Carnivore - Radical Software Group
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra12" style="display: none;">
+                        <h1>They Rule (2002 – actiu)</h1>
+                        <h2>Josh On i Future Farmers</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Pàgina web interactiva per a visalitzar les dades de forma
+                                esquematitzada, de manera que es mostren les relacions les 87 companyies nord
+                                americanes més important a través d’una interfaç pertinent per a poder visibilitzar
+                                les relacions entre corporacions a través dels seus directius.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/13.png" alt="" class="img">
+                                <div class="infobox">
+                                    They Rule - Josh On i Future Farmers
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra13" style="display: none;">
+                        <h1>Webcam in Iraq. (2003 - 2004)</h1>
+                        <h2>info@webcaminiraq.org</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Projecte pel qual es pretén col·locar una càmera web en un dels
+                                carrers més importants de Bagdad. El projecte té dues vertents: el primer és un
+                                visualitzador de vídeo a la mateixa pàgina web, el segon és un videomàping
+                                col·lectiu i internacional, per assolir-lo s’anima a qualsevol persona que dispose
+                                d’un ordenador a mappejar el contingut de la pàgina web a qualsevol ciutat, al lloc
+                                que desitje l’usuari.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/14.jpg" alt="" class="img">
+                                <div class="infobox">
+                                    Webcam in Iraq - info@webcaminiraq.org
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra14" style="display: none;">
+                        <h1>Dead – in – Iraq (2006 – 2011)</h1>
+                        <h2>Josep Delappe</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Performance / memorial, sobre la guerra d’Iraq en el joc online multi
+                                jugador “Americana Army”. El joc va ser creat com a ferramenta propagandística
+                                de l’exercit d’EE.UU. La performance consisteix en que l’artista introdueix al xat el
+                                nom, l’edat, branca del servei militar i data de la mort. (4484 noms)
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/15.jpg" alt="" class="img">
+                                <div class="infobox">
+                                    Dead – in – Iraq - Josep Delappe
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra15" style="display: none;">
+                        <h1>Oligarchy (2008)</h1>
+                        <h2>The molleindústria</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Joc online a través del qual el jugador simula ser un magnat del petroli.
+                                Al joc l’usuari ha de “explorar i perforar al voltant del món, corrompre polítics,
+                                detindre energies alternatives i augmentar l’addicció al petroli."
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/16.png" alt="" class="img">
+                                <div class="infobox">
+                                    Oligarchy - The molleindústria
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra16" style="display: none;">
+                        <h1>Un Barrio Feliz. (2009 – 2010)</h1>
+                        <h2>Els veïns del barri de Lavapiés</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Blog creat pels veïns de Lavapiés, Madrid quan s’assabentaren que
+                                l’ajuntament pretenia ficar càmeres de vigilància al barri baix la premissa de
+                                controlar la criminalitat al barri. Al blog es comparteixen opinions, notícies... però
+                                també es duen a terme convocatòries artístiques i s’informen de mobilitzacions i
+                                altres accions polítiques contra la vigilància del barri.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/17.jpg" alt="" class="img">
+                                <div class="infobox">
+                                    Un Barrio Feliz. - Els veïns del barri de Lavapiés
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra17" style="display: none;">
+                        <h1>Transborder Immigrant Tool (2009 - 2012)</h1>
+                        <h2>Electronic Disturbance Theater</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Aplicació mòbil a través de la qual s’oferia informació per a poder
+                                creuar la frontera a Estats Units de manera segura. L’aplicació informava d’on hi
+                                havia aigua potable, on no hi havien controls de fronteres… també enviava
+                                poemes per a "assegurar el bon estat mental dels viatgers".
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/18.jpg" alt="" class="img">
+                                <div class="infobox">
+                                    Transborder Immigrant Tool - Electronic Disturbance Theater
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra18" style="display: none;">
+                        <h1>Torture Classics (2010)</h1>
+                        <h2>UBERMORGEN.org</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Recopilació online de les 60 cançons empleades a Guantànamo
+                                durant la tortura dels presoners per part de l’exercit nord-americà. A la web es
+                                mostra la llista, no sols et permet, sinó també et convida a descarregar les cançons
+                                de manera “pirata”.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/19.png" alt="" class="img">
+                                <div class="infobox">
+                                    Torture Classics - UBERMORGEN.org
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra19" style="display: none;">
+                        <h1>Memetro (2010 – actiu.)</h1>
+                        <h2>Els usuaris del metro.</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Pàgina web i aplicació mòbil a través de la qual alertar i informar sobre
+                                els controls de bitllets al metro de Barcelona. S’articula al voltant de l’enfermetat
+                                inventada de “memetro”, per la qual, qui la pateix sofreix de falta de memòria
+                                transitòria, provocant que s’oblide de picar el bitllet de metro.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/20.png" alt="" class="img">
+                                <div class="infobox">
+                                    Memetro - Els usuaris del metro.
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra20" style="display: none;">
+                        <h1>Phone Story (2012)</h1>
+                        <h2>The molleindústria</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Aplicació mòbil i pàgina web. Es tracta d’un joc que mostra les
+                                pràctiques deshumanitzadores que es porten a terme durant la fabricació del
+                                producte més utilitzat pels consumidors: el smartphone. A la pàgina web
+                                s’expliquen aquestes pràctiques.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/21.png" alt="" class="img">
+                                <div class="infobox">
+                                    Phone Story - The molleindústria
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra21" style="display: none;">
+                        <h1>La Muerte sale por el oriente (2014 – 2017)</h1>
+                        <h2>Sonia Madrigal</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Projecte fotogràfic online sobre la violencia extrema de gènere a
+                                mèxic. Consta de tres eixos: En primer lloc, un arxiu de fotografia documental
+                                ordenat de manera geogràfica; en segon lloc, una intervenció artística física,
+                                documentada amb fotografies, que consisteix en col·locar espills amb la forma
+                                d’una silueta femenina estratègicament als punts del país qualificat com a insegur
+                                per les dones; i per últim, un mapeig digital de feminicidis.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/22.jpg" alt="" class="img">
+                                <div class="infobox">
+                                    La Muerte sale por el oriente - Sonia Madrigal
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra22" style="display: none;">
+                        <h1>#PAYBLACKTIME (2016 - 2017)</h1>
+                        <h2>Rafia Santana</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                A través d’un perfil de les xarxes socials, concretament de Facebook,
+                                l’artista anima als usuaris blancs a enviar diners via Paypal per a persones
+                                racialitzades; a la vegada, i a través del perfil, aquestes demanarien el que volen
+                                per menjar. Posteriorment ella els enviaria menjar a través de Grabhub, una
+                                plataforma de menjars a domicili.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/23.jpg" alt="" class="img">
+                                <div class="infobox">
+                                    #PAYBLACKTIME - Rafia Santana
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra23" style="display: none;">
+                        <h1>Queering The Map (2017 – actiu.)</h1>
+                        <h2>Lucas de Larochelle</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Mapeig obert, col·lectiu, online i amb abast efectiu global,
+                                d’experiències queer.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/24.png" alt="" class="img">
+                                <div class="infobox">
+                                    Queering The Map - Lucas de Larochelle
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra24" style="display: none;">
+                        <h1>Elegy: GTA. Gun Homicides (2018 – 2019)</h1>
+                        <h2>Josep Delappe, Albert Elwin i Biane Collective</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Elegy és un mod que funciona com una visualització de dades en
+                                streaming al joc “GTA V”. Més que una performance, la intervenció és un
+                                “reenactment”, en temps real, que interpreta els homicidis per armes de foc
+                                enregistrats per “Gun Violence Archive”76. Va ser retransmès a la plataforma en
+                                linea de directes twitch durant un any: del 4 de juliol de 2018 fins el 4 de juliol del
+                                2019. La primera gravació de la cançó “God Bless America” (Kate Smith, 1938)
+                                acompanya la retransmissió en loop.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/25.jpg" alt="" class="img">
+                                <div class="infobox">
+                                    Elegy: GTA. Gun Homicides - Josep Delappe, Albert Elwin i Biane Collective
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra25" style="display: none;">
+                        <h1>Democratic Socialist Simulator (2020)</h1>
+                        <h2>The molleindústria</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Joc online a través del qual es simula una distòpia a través de la qual
+                                la social-democràcia funciona com els opositors difonen que funciona.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/26.png" alt="" class="img">
+                                <div class="infobox">
+                                    Democratic Socialist Simulator - The molleindústria
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra26" style="display: none;">
+                        <h1>Radio Alhara (2020 – actiu.)</h1>
+                        <h2>Yazan Khalili, Yousef Anastas, Elias Anastas, Said Abu Jaber y Mothanna
+                            Hussein</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Estació de ràdio en línia palestina que retransmet des de la ciutat de
+                                Betlem. A la seua pàgina web trobem un dispositiu de reproducció, per poder
+                                escoltar les retransmissions, i una bústia de missatges de manera que la ràdio pot
+                                rebre feedback dels oients. El seu Instagram (@radioalhara) funciona de ferramenta
+                                per la difusió dels seus programes, sessions musicals i altres activitats, però també
+                                fan una labor de difusió de plataformes d’ajuda humanitària en solidaritat amb
+                                Palestina.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/27.jpg" alt="" class="img">
+                                <div class="infobox">
+                                    Radio Alhara - Yazan Khalili, Yousef Anastas, Elias Anastas, Said Abu Jaber y Mothanna
+                                    Hussein
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra27" style="display: none;">
+                        <h1>Hannah Uncut (2021)</h1>
+                        <h2>0100101110101101.org - Eva i Franco Mates</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Així com feren a “Riccardo Uncut” a 2018, els artistes publicaren a les
+                                xarxes socials un anunci de compra del mòbil de qui fora per 1000€ amb la
+                                premissa que, tots els arxius al mòbil servirien per fer un projecte artístic: un “arxiu
+                                vital”, el qual serà exposat a institucions museístiques, però també a internet.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/28.jpg" alt="" class="img">
+                                <div class="infobox">
+                                    Hannah Uncut - Eva i Franco Mates
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra27" style="display: none;">
+                        <h1>Filter For Good (2023)</h1>
+                        <h2>Jourdan Johnson // @XoJourdanlouise</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Un filtre a la plataforma Tik Tok a través del qual has de conduir una
+                                porció de sindria (símbol de la lluita palestina) per un curt recorregut.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/29.jpg" alt="" class="img">
+                                <div class="infobox">
+                                    Filter For Good - Jourdan Johnson
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra28" style="display: none;">
+                        <h1>All New Gen (1992 – 1995)</h1>
+                        <h2>Autor(s): VNS matrix</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                Joc / CD room, el qual consisteix en una entitat femenina sense cos,
+                                que s’infiltra i saboteja el banc de dades d’un tal “Big Daddy”, un home de classe
+                                alta, qui és ajudat per Circuit Boy, un “tecno-xiquet” caracteritzat sense cap i amb
+                                un penis desproporcionat que es converteix en telèfon. L’objectiu del joc és
+                                col·laborar en el desordre mundial i acabar mb la falocràcia
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/30.png" alt="" class="img">
+                                <div class="infobox">
+                                    All New Gen - VNS matrix
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                    <section id="obra30" style="display: none;">
+                        <h1>Desmantelando la línea. (2023)</h1>
+                        <h2>Joel Chaou Latorre</h2>
+                        <div class="content_container">
+                            
+                            <p class="entry">
+                                documental interactiu centrat en el tancament de la línia
+                                convencional de Madrid-Cuenca-Utiel, on es convida els usuaris a descobrir, a
+                                través de les històries dels seus protagonistes, l'origen i el tancament d'una via
+                                històrica que va connectar la capital d'Espanya amb el Mediterrani. Tracta de visibilitzar com les zones rurals i en vies de despoblament van quedant-se poc a poc sense serveis públics tan necessaris com el transport.
+                            </p>
+                            <div class="img_cont">
+                                <img src="img/repo/31.gif" alt="" class="img">
+                                <div class="infobox">
+                                    Desmantelando la línean - Joel Chaou Latorre
+                                </div>
+                            </div>   
+                        </div>
+                    </section>
+                </div>
+                <footer>
+                    <footer class="ui_footer" id="footer_general">
+
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra0" style="display: none;">
+                        <a class="footer_link" href="https://vnsmatrix.net/projects/all-new-gen">https://vnsmatrix.net/projects/all-new-gen</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra1" style="display: none;">
+                        <a class="footer_link" href="http://www.thefileroom.org/">http://www.thefileroom.org/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra2" style="display: none;">
+                        <a class="footer_link" href="http://www.ljudmila.org/~vuk/dx/">http://www.ljudmila.org/~vuk/dx/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra3" style="display: none;">
+                        <a class="footer_link" href="https://www.irational.org/mvc/">https://www.irational.org/mvc/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra4" style="display: none;">
+                        <a class="footer_link" href="https://0100101110101101.org/darko-maver/">https://0100101110101101.org/darko-maver/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra5" style="display: none;">
+                        <a class="footer_link" href="https://sites.rhizome.org/anthology/floodnet.html">https://sites.rhizome.org/anthology/floodnet.html</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra6" style="display: none;">
+                        <a class="footer_link" href="https://0100101110101101.org/copy-of-hell-com/">https://0100101110101101.org/copy-of-hell-com/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra7" style="display: none;">
+                        <a class="footer_link" href="https://vote-auction.net/">https://vote-auction.net/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra8" style="display: none;">
+                        <a class="footer_link" href="https://www.opensorcery.net/velvet-strike/about.html">https://www.opensorcery.net/velvet-strike/about.html</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra9" style="display: none;">
+                        <a class="footer_link" href="https://www.irational.org/heath/borderxing/home.html">https://www.irational.org/heath/borderxing/home.html</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra10" style="display: none;">
+                        <a class="footer_link" href="https://web.archive.org/web/20191104103325/http://e-valencia.org/">https://web.archive.org/web/20191104103325/http://e-valencia.org/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra11" style="display: none;">
+                        <a class="footer_link" href="http://r-s-g.org/carnivore/">http://r-s-g.org/carnivore/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra12" style="display: none;">
+                        <a class="footer_link" href="https://theyrule.net/">https://theyrule.net/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra13" style="display: none;">
+                        <a class="footer_link" href="https://web.archive.org/web/20030202065921/http://www.webcaminiraq.org/">https://web.archive.org/web/20030202065921/http://www.webcaminiraq.org/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra14" style="display: none;">
+                        <a class="footer_link" href="https://www.delappe.net/dead-in-iraq">https://www.delappe.net/dead-in-iraq</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra15" style="display: none;">
+                        <a class="footer_link" href="https://molleindustria.org/en/oiligarchy/">https://molleindustria.org/en/oiligarchy/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra16" style="display: none;">
+                        <a class="footer_link" href="https://unbarriofeliz.wordpress.com/">https://unbarriofeliz.wordpress.com/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra17" style="display: none;">
+                        <a class="footer_link" href="https://anthology.rhizome.org/transborder-immigrant-tool">https://anthology.rhizome.org/transborder-immigrant-tool</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra18" style="display: none;">
+                        <a class="footer_link" href="https://www.tortureclassics.com/">https://www.tortureclassics.com/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra19" style="display: none;">
+                        <a class="footer_link" href="http://www.memetro.net/">http://www.memetro.net/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra20" style="display: none;">
+                        <a class="footer_link" href="https://www.phonestory.org/">https://www.phonestory.org/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra21" style="display: none;">
+                        <a class="footer_link" href="https://lamuertesaleporeloriente.tumblr.com">https://lamuertesaleporeloriente.tumblr.com</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra22" style="display: none;">
+                        <a class="footer_link" href="https://www.facebook.com/PayBlackTime/">https://www.facebook.com/PayBlackTime/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra23" style="display: none;">
+                        <a class="footer_link" href="https://www.queeringthemap.com/">https://www.queeringthemap.com/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra24" style="display: none;">
+                        <a class="footer_link" href="https://www.delappe.net/elegy-gta-usa-homicides">https://www.delappe.net/elegy-gta-usa-homicides</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra25" style="display: none;">
+                        <a class="footer_link" href="https://www.molleindustria.org/demsocsim/">https://www.molleindustria.org/demsocsim/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra26" style="display: none;">
+                        <a class="footer_link" href="https://www.radioalhara.net/">https://www.radioalhara.net/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra27" style="display: none;">
+                        <a class="footer_link" href="https://0100101110101101.org/hannah-uncut/">https://0100101110101101.org/hannah-uncut/</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra28" style="display: none;">
+                        <a class="footer_link" href="https://www.tiktok.com/@xojourdanlouise">https://www.tiktok.com/@xojourdanlouise</a>
+                    </footer>
+                    <footer class="ui_footer" id="footer_obra30" style="display: none;">
+                        <a class="footer_link" href="https://midgard.antifa.se/">https://midgard.antifa.se/</a>
+                    </footer>
+                </footer>
+            </div>
+        </div>
+        <div class="draggable" onclick="bringToTop(1)" id="window1" style="top: 215px; left: 866px;">
+            <div class="window">
+                <header class="bar">
+                    <div class="icon_container">
+                        <div class="bar_icon_left">
+                            <img src="img/icon_bar.svg" class="icon" alt="">
                         </div>
                     </div>
-                    
-                </div>
-            </section>
-            <footer class="ui_footer">
-                
-            </footer>
-        </div>
-    </div>
-    <footer>
+                    <div>
+                        <span class="bar_text">
+                            El projecte
+                        </span>
+                    </div>
+                    <div style="width: 100%; display: block;">
+                        <div class="deco_bar">
 
-    </footer>
-    <script src="js/draggable.js"></script>
-</body>
+                        </div>
+                        <div class="deco_bar">
+
+                        </div>
+                    </div>
+                    <div class="icon_container">
+                        <div class="separador"></div>
+                        <div class="bar_icon_right">
+                            <img src="img/min_button.svg" class="icon" alt="">
+                        </div>
+                        <div class="separador"></div>
+                        <div class="bar_icon_right">
+                            <img src="img/close_button.svg" onclick="hideWindow(1)" class="icon" alt="">
+                        </div>
+                        <div class="separador"></div>
+                    </div>
+                </header>
+                <section>
+                    <div class="content_container" style="margin-right: 8px;">
+                        
+                        <p class="entry">
+                            The Matrix Archive és un arxiu web destinat a recollir obres, accions o intervencions de net.art polític, artivisme i hacktivisme concebudes des de la dècada dels noranta, és a dir, els seus inicis, fins al present any 2024, així com totes aquelles obres, accions o intervencions que es produïsquen en el futur. L’arxiu es concep com un arxiu col·laboratiu a través del qual els usuaris de la xarxa puguen afegir obres a l’arxiu a través d’un senzill formulari.
+    
+                            El present projecte naix arran el treball de final de màster de la curadora d’aquesta versió inicial de l’arxiu: Martina Vicedo, consistent en la caracterització de les pràctiques artístiques activistes en la web; Martina, conscient de les seues limitacions, decideix aliar-se amb el dissenyador gràfic i web Andreu Vicedo. 
+                            
+                            D’aquesta manera l’equip creador de The Matrix Archive fica un repositori d’obres creixent a la disposició de qui desitge utilitzar-lo, siga per l’elaboració de projectes artístics, investigacions acadèmiques o professionals o bé, simplement, per curiositat.
+                            
+                        </p>
+                    </div>
+                </section>
+                <footer class="ui_footer">
+
+                </footer>
+            </div>
+        </div>
+        <div class="draggable" onclick="bringToTop(2)" id="window2" style="top: 93px; left: 426px;">
+            <div class="window">
+                <header class="bar">
+                    <div class="icon_container">
+                        <div class="bar_icon_left">
+                            <img src="img/icon_bar.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="bar_text">
+                            Col·labora
+                        </span>
+                    </div>
+                    <div style="width: 100%; display: block;">
+                        <div class="deco_bar">
+
+                        </div>
+                        <div class="deco_bar">
+
+                        </div>
+                    </div>
+                    <div class="icon_container">
+                        <div class="separador"></div>
+                        <div class="bar_icon_right">
+                            <img src="img/min_button.svg" class="icon" alt="">
+                        </div>
+                        <div class="separador"></div>
+                        <div class="bar_icon_right">
+                            <img src="img/close_button.svg" onclick="hideWindow(2)" class="icon" alt="">
+                        </div>
+                        <div class="separador"></div>
+                    </div>
+                </header>
+                <section>
+                    <div class="window">
+                        <h1>Vols col·laborar?</h1>
+                        <h2>
+                            A THE MATRIX ARCHIVE estem sempre oberts a ampliar el nostre arxiu d'obres. 
+                            Si estàs interessat/da per favor emplena els camps de baix amb la informació 
+                            de l'obra que conegues.
+                        </h2>
+                        <div class="form">
+                            <div style="display: flex;">
+                                <div>
+                                    <p>Nom de l'obra</p>
+                                    <input class="small" type="text" id="name" name="name" required>
+                                </div>
+                                <div>
+                                    <p>Autor/es</p>
+                                    <input class="small" type="text" id="authors" name="authors" required>
+                                </div>
+                                <div>
+                                    <p>Any/s</p>
+                                    <input style="width: 100px;" class="small" type="number" id="years" name="years" required>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Descripció de l'obra</p>
+                                <textarea name="Text1" cols="40" rows="5"></textarea>
+                            </div>
+                            <div style="display: flex; margin-bottom: 10px;">
+                                <div style="display: block;">
+                                    <p>Adjunta una imatge representativa</p>
+                                    <input style="font-size: 14px;" type="file" id="attachment" name="attachment">
+                                </div>
+                                <button class="enviar">
+                                    <p>Enviar</p>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </section>
+                <footer class="ui_footer">
+                    
+                </footer>
+            </div>
+        </div>
+        <div class="draggable" onclick="bringToTop(3)" id="window3" style="top: 300px; left: 1100px;">
+            <div class="window">
+                <header class="bar">
+                    <div class="icon_container">
+                        <div class="bar_icon_left">
+                            <img src="img/icon_bar.svg" class="icon" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <span class="bar_text">
+                            Xarxes
+                        </span>
+                    </div>
+                    <div style="width: 100%; display: block;">
+                        <div class="deco_bar">
+
+                        </div>
+                        <div class="deco_bar">
+
+                        </div>
+                    </div>
+                    <div class="icon_container">
+                        <div class="separador"></div>
+                        <div class="bar_icon_right">
+                            <img src="img/min_button.svg" class="icon" alt="">
+                        </div>
+                        <div class="separador"></div>
+                        <div class="bar_icon_right">
+                            <img src="img/close_button.svg" onclick="hideWindow(3)" class="icon" alt="">
+                        </div>
+                        <div class="separador"></div>
+                    </div>
+                </header>
+                <section style="width: 460px; height: 175px;">
+                    <div class="content_container" style="margin-right: 8px;">
+                        <a href="https://twitter.com/matrixarchive">
+                            <div class="ui-element-0" style="top: 70px; left: 30px;">
+                                <img src="img/x_icon.svg" alt="">
+                                <span>Twitter</span>
+                        </a>
+                        </div>
+                        <div class="ui-element-0" style="top: 70px; left: 190px;">
+                            <a href="https://www.instagram.com/matrixarchive/">
+                                <img src="img/insta_icon.svg" alt="">
+                                <span>Instagram</span>
+                        </a>
+                        </div>
+                        <div class="ui-element-0" style="top: 70px; left: 350px;">
+                            <a href="https://www.facebook.com/matrixarchive/">
+                                <img src="img/f_icon.svg" alt="">
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <footer class="ui_footer">
+
+                </footer>
+            </div>
+        </div>
+
+        <footer>
+        </footer>
+        <script src="js/draggable.js"></script>
+    </body>
 </html>
