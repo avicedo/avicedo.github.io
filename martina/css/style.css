@@ -119,6 +119,11 @@ body {
     width: 60px;
 }
 
+.ui-element-0 a {
+    color: #fff;
+    text-decoration: none;
+}
+
 /* VENTANAS GENERAL */
 .draggable {
     position: absolute;
@@ -256,6 +261,8 @@ body {
 #window3{
     display: none;
 }
+
+
 
 /* REPOSITORIO */
 
